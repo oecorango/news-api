@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+		"style main": "sass --watch shelter/pages/main/style.scss shelter/pages/main/style.css",
+		"style pets": "sass --watch shelter/pages/pets/style.scss shelter/pages/pets/style.css"
   },
   "repository": {
     "type": "git",
