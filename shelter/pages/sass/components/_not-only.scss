@@ -1,0 +1,28 @@
+.not-only__wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.not-only__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 36%;
+}
+
+.not-only__img {
+	display: flex;
+	max-width: 60%;
+}
+
+.start__img {
+	overflow: hidden;
+}
+
+.not-only__text {
+	font-family: 'Arial';
+	font-size: 15px;
+	line-height: 160%;
+	color: $color-dark-s;
+	padding: 42px 0;
+}
