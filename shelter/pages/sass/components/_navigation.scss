@@ -4,12 +4,15 @@
 }
 
 .navigation__link {
-	padding: 0 17.5px;
+	padding-right: 35px;
 	list-style-type: none;
+}
+.navigation__link:last-child {
+	padding-right: 0;
 }
 
 .nav__link {
-	@include font($size: 1.5rem, $height: 160%, $letter: 0.06rem);
+	@include font($size: 1.5rem, $height: 160%);
 	color: $color-dark-s;
 	text-decoration: none;
 	position: relative;

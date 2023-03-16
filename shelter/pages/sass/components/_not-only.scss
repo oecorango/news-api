@@ -1,13 +1,20 @@
+.back_img {
+	background: url('../../assets/image/main/start-screen-gradient-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .not-only__wrapper {
 	display: flex;
 	justify-content: space-between;
+	padding: 0 40px;
 }
 
 .not-only__content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	max-width: 36%;
+	padding-top: 164px;
+	max-width: 39%;
 }
 
 .not-only__img {
@@ -15,12 +22,7 @@
 	max-width: 60%;
 }
 
-.start__img {
-	overflow: hidden;
-}
-
 .not-only__text {
-	@include font($size: 1.5rem, $height: 160%);
 	color: $color-dark-s;
-	padding: 42px 0;
+	padding: 41px 0;
 }
