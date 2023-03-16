@@ -1,4 +1,5 @@
-html {
+html,
+body {
 	font-size: 10px;
 	scroll-behavior: smooth;
 	background: url('../../assets/image/main/start-screen-gradient-background.png');
@@ -10,17 +11,7 @@ html {
 	margin: 0;
 }
 
-.header,
-.not-only {
-	// background: url('../../assets/image/main/start-screen-gradient-background.png');
-  // background-repeat: no-repeat;
-  // background-size: cover;
-}
-
 h1 {
-	font-family: 'Georgia';
-	font-weight: 400;
-	font-size: 4.4rem;
-	line-height: 130%;
+	@include font($family: 'Georgia', $size: 4.4rem, $height: 130%,);
 	color: $color-light;
 }

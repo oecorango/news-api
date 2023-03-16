@@ -1,0 +1,23 @@
+.about {
+	background: $color-light;
+}
+
+.about__wrapper {
+	display: flex;
+	justify-content: center;
+	padding: 80px 0 100px 0;
+}
+
+.about__img {
+	display: flex;
+	max-width: 36%;
+}
+
+.about__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 60%;
+	padding: 80px, 0, 100px, 0;
+}

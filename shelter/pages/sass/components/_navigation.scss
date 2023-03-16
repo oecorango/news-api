@@ -9,16 +9,14 @@
 }
 
 .nav__link {
-	font-family: "Arial";
+	@include font($size: 1.5rem, $height: 160%, $letter: 0.06rem);
 	color: $color-dark-s;
 	text-decoration: none;
 	position: relative;
-	font-size: 1.5rem;
-	line-height: 160%;
-	transition: all 0.3s;
+	@extend %transition;
 	&.active {
 		color: $color-light-s;
-		transition: all 0.3s;
+		@extend %transition;
 		&:after {
 			position: absolute;
 			content: "";
@@ -37,11 +35,11 @@
     bottom: -7px;
     right: 0;
     left: 0;
-    transition: all 0.3s;   
+    @extend %transition;
   } 
   &:hover {
 		color: $color-light-s;
-		transition: all 0.3s;
+		@extend %transition;
     &:after {
       width: 100%; 
     }

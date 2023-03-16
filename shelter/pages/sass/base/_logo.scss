@@ -1,17 +1,9 @@
 .logo__title {
-	font-family: 'Georgia';
+	@include font($family: 'Georgia', $size: 3.2rem, $height: 110%, $letter: 0.06rem);
 	color: $color-primary;
-	font-weight: 400;
-	font-size: 3.2rem;
-	line-height: 110%;
-	letter-spacing: 0.06em;
 }
 
 .logo__subtitle {
-	font-family: 'Arial';
+	@include font($size: 1.3rem, $height: 150%, $letter: 0.1rem);
 	color: $color-light;
-	font-weight: 400;
-	font-size: 1.3rem;
-	line-height: 1.5rem;
-	letter-spacing: 0.1em;
 }

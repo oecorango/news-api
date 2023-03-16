@@ -1,14 +1,19 @@
+// abstracts
 @import "./abstracts/fonts";
 @import "./abstracts/constants";
+@import "./abstracts/mixins";
+@import "./abstracts/placeholders";
 
 // base
 @import "./base/base";
 @import "./base/logo";
 @import "./base/buttons";
 
+
 // components
 @import "./components/navigation";
 @import "./components/not-only";
+@import "./components/about";
 
 // layouts
 @import "./layouts/header";
