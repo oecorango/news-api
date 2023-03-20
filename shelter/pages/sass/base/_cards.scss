@@ -6,6 +6,12 @@
 	padding-bottom: 30px;
 	border-radius: 9px;
 	user-select: none;
+	cursor: pointer;
+	&:hover > button {
+		background: $color-primary-light;
+		border: 2px solid $color-primary-light;
+		@extend %transition;
+	}
 }
 
 .pets-card-title {

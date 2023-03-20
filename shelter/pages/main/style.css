@@ -6,7 +6,7 @@
   font-family: "Georgia";
   src: url("../../assets/fonts/Georgia.woff2");
 }
-.nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .carousel__prev,
+.nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .cards:hover > button, .carousel__prev,
 .carousel__next, .button:hover {
   transition: all 0.5s ease-out;
 }
@@ -114,9 +114,6 @@ img {
   background-color: #FAFAFA;
   border: 2px solid #F1CDB3;
 }
-.button__carousel:hover {
-  border: 2px solid #FDDCC4;
-}
 
 .button__our-friends {
   width: 26.1rem;
@@ -171,6 +168,11 @@ img {
   padding-bottom: 30px;
   border-radius: 9px;
   user-select: none;
+  cursor: pointer;
+}
+.cards:hover > button {
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 .pets-card-title {
