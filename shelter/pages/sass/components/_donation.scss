@@ -1,0 +1,59 @@
+.donation {
+	background-color: $color-light-l;
+}
+
+.donation__wrapper {
+	display: flex;
+	padding: 80px 183px 100px;
+}
+
+.donation__content {
+	display: flex;
+	flex-direction: column;
+	padding: 0 0 0 30px;
+}
+
+.donation__credit-card {
+	display: flex;
+	align-items: center;
+	background-color: $color-primary;
+	margin: 20px 0;
+	border-radius: 9px;
+	width: 349px;
+	height: 43px;
+}
+
+.credit-card__ico {
+	display: flex;
+	min-width: auto;
+	width: 30px;
+	height: 23px;
+	padding: 10px 15px;
+}
+
+#credit-card-input {
+	display: flex;
+	background-color: $color-primary;
+	width: 80%;
+	height: 23px;
+	border: none;
+	@include font($family: 'Georgia', $size: 2rem, $height: 115%, $letter: 0.06em);
+	color: $color-dark-l;
+}
+
+.text__type-of-bank {
+	@include font($family: 'Georgia', $size: 1.5rem, $height: 110%, $letter: 0.06em);
+	color: $color-dark-m;
+	padding-top: 20px;
+}
+
+.donation__text {
+	@include font($size: 1.2rem, $height: 150%, $style: italic);
+	color: $color-dark-m;
+}
+
+.donation__img {
+	display: flex;
+	align-items: center;
+}
+
