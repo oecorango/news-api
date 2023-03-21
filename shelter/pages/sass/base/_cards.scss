@@ -1,0 +1,23 @@
+.cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $color-light-s;
+	padding-bottom: 30px;
+	border-radius: 9px;
+	user-select: none;
+	cursor: pointer;
+	&.pets {
+		margin-bottom: 32px;
+	
+	}
+	&:hover > button {
+		background: $color-primary-light;
+		border: 2px solid $color-primary-light;
+		@extend %transition;
+	}
+}
+
+.pets-card-title {
+	padding: 18px 0;
+}

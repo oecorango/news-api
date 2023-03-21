@@ -1,0 +1,34 @@
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+}
+
+h1 {
+	@include font($family: 'Georgia', $size: 4.4rem, $height: 130%,);
+	color: $color-light;
+}
+
+h2 {
+	@include font($family: 'Georgia', $size: 3.5rem, $height: 130%, $letter: 0.06em);
+	color: $color-dark-l;
+}
+
+h3 {
+	@include font ($family: 'Georgia', $size: 2rem, $height: 2.3, $letter: 0.06em);
+	color: $color-dark-l;
+}
+
+p {
+	@include font($size: 1.5rem, $height: 160%);
+	color: $color-dark-xl;
+}
+
+img {
+	overflow: hidden;
+	min-width: 100%;
+	height: auto;
+}

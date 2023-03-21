@@ -1,0 +1,21 @@
+.about {
+	background: $color-light;
+}
+
+.about__wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 80px 215px 100px;
+}
+
+.about__img {
+	display: flex;
+}
+
+.about__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 430px;
+	padding: 14px 0;
+}

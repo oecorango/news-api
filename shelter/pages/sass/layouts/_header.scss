@@ -1,0 +1,22 @@
+.header {
+	background: url('../../assets/image/background/start-screen-gradient-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+	&.pets {
+		background: $color-light
+	}
+}
+
+.header__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 40px 86px;
+	&.pets {
+		padding: 24px 40px 26px;
+	}
+}
+
+
+
+
