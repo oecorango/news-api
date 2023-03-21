@@ -74,7 +74,10 @@ img {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: #F1CDB3;
-  padding: 6px 0;
+  padding: 7px 0;
+}
+.logo__title.pets {
+  color: #545454;
 }
 
 .logo__subtitle {
@@ -86,6 +89,9 @@ img {
   letter-spacing: 0.1em;
   color: #FFFFFF;
   padding-left: 4px;
+}
+.logo__subtitle.pets {
+  color: #292929;
 }
 
 .button {
@@ -170,6 +176,9 @@ img {
   user-select: none;
   cursor: pointer;
 }
+.cards.pets {
+  margin-bottom: 32px;
+}
 .cards:hover > button {
   background: #FDDCC4;
   border: 2px solid #FDDCC4;
@@ -185,7 +194,7 @@ img {
 }
 
 .navigation__link {
-  padding-right: 35px;
+  padding-right: 36px;
   list-style-type: none;
 }
 
@@ -204,8 +213,14 @@ img {
   text-decoration: none;
   position: relative;
 }
+.nav__link.pets {
+  color: #545454;
+}
 .nav__link.active {
   color: #FAFAFA;
+}
+.nav__link.active.pets {
+  color: #292929;
 }
 .nav__link.active:after {
   position: absolute;
@@ -227,6 +242,9 @@ img {
 }
 .nav__link:hover {
   color: #FAFAFA;
+}
+.nav__link:hover.pets {
+  color: #292929;
 }
 .nav__link:hover:after {
   width: 100%;
@@ -287,12 +305,22 @@ img {
   flex-direction: column;
   padding: 80px 39px 100px;
 }
+.our-friends__wrapper.pets {
+  padding: 82px 39px 10px;
+}
 
 .our-friends__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.pets__galery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 58px 0;
 }
 
 .help__wrapper {
@@ -384,13 +412,18 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.header.pets {
+  background: #FFFFFF;
+}
 
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 180px;
-  padding: 0 40px;
+  padding: 25px 40px 86px;
+}
+.header__wrapper.pets {
+  padding: 24px 40px 26px;
 }
 
 .wrapper {

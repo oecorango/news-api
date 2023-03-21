@@ -4,7 +4,7 @@
 }
 
 .navigation__link {
-	padding-right: 35px;
+	padding-right: 36px;
 	list-style-type: none;
 }
 .navigation__link:last-child {
@@ -12,13 +12,19 @@
 }
 
 .nav__link {
-	@include font($size: 1.5rem, $height: 160%);
+	@include font($size: 1.5rem, $height: 160%,);
 	color: $color-dark-s;
+	&.pets {
+		color: $color-dark-l;
+	}
 	text-decoration: none;
 	position: relative;
 	@extend %transition;
 	&.active {
 		color: $color-light-s;
+		&.pets {
+			color: $color-dark-3xl;
+		}
 		@extend %transition;
 		&:after {
 			position: absolute;
@@ -42,6 +48,9 @@
   } 
   &:hover {
 		color: $color-light-s;
+		&.pets {
+			color: $color-dark-3xl;
+		}
 		@extend %transition;
     &:after {
       width: 100%; 

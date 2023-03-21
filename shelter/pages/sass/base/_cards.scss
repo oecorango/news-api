@@ -7,6 +7,10 @@
 	border-radius: 9px;
 	user-select: none;
 	cursor: pointer;
+	&.pets {
+		margin-bottom: 32px;
+	
+	}
 	&:hover > button {
 		background: $color-primary-light;
 		border: 2px solid $color-primary-light;
