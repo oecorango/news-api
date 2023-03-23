@@ -8,7 +8,7 @@
 	flex-direction: column;
 	padding: 80px 39px 100px;
 	&.pets {
-		padding: 82px 39px 10px; //проверить паддинг баттом после написания всего кода ;)
+		padding: 82px 39px 101px;
 	}
 }
 
@@ -23,6 +23,39 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 58px 0;
-
+	padding: 58px 0 30px;
 }
+
+.our-friends_nav {
+	display: flex;
+}
+
+.our-friends-pats__navigation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 23px;
+	width: 28px;
+	border: 2px solid $color-primary;
+	border-radius: 100px;
+	margin: auto;
+	padding: 12px 10px;
+	margin: 0 10px;
+	cursor: pointer;
+	user-select: none;
+	color: $color-dark-3xl;
+	@extend %transition;
+	&:hover {
+		background-color: $color-primary-light;
+		border: 2px solid $color-primary-light;
+	}
+	&.active {
+		background-color: $color-primary;
+		border: 2px solid $color-primary;
+	}
+	&.passive {
+		color: $color-dark-s;
+		border: 2px solid $color-dark-s;
+	}
+}
+

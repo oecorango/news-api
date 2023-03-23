@@ -6,7 +6,7 @@
   font-family: "Georgia";
   src: url("../../assets/fonts/Georgia.woff2");
 }
-.nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .button:hover, .cards:hover > button {
+.nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .our-friends-pats__navigation, .button:hover, .cards:hover > button {
   transition: all 0.5s ease-out;
 }
 
@@ -44,7 +44,7 @@ h3 {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  line-height: 2.3;
+  line-height: 115%;
   letter-spacing: 0.06em;
   color: #545454;
 }
@@ -61,8 +61,6 @@ p {
 
 img {
   overflow: hidden;
-  min-width: 100%;
-  height: auto;
 }
 
 .cards {
@@ -76,7 +74,7 @@ img {
   cursor: pointer;
 }
 .cards.pets {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 .cards:hover > button {
   background: #FDDCC4;
@@ -84,7 +82,7 @@ img {
 }
 
 .pets-card-title {
-  padding: 18px 0;
+  padding: 30px 0;
 }
 
 .button {
@@ -162,7 +160,7 @@ img {
   padding: 80px 39px 100px;
 }
 .our-friends__wrapper.pets {
-  padding: 82px 39px 10px;
+  padding: 82px 39px 101px;
 }
 
 .our-friends__header {
@@ -176,7 +174,39 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 58px 0;
+  padding: 58px 0 30px;
+}
+
+.our-friends_nav {
+  display: flex;
+}
+
+.our-friends-pats__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 23px;
+  width: 28px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  margin: auto;
+  padding: 12px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  user-select: none;
+  color: #292929;
+}
+.our-friends-pats__navigation:hover {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+.our-friends-pats__navigation.active {
+  background-color: #F1CDB3;
+  border: 2px solid #F1CDB3;
+}
+.our-friends-pats__navigation.passive {
+  color: #CDCDCD;
+  border: 2px solid #CDCDCD;
 }
 
 .navigation__list {
