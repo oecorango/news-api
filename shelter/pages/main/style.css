@@ -92,6 +92,11 @@ img {
   color: #292929;
 }
 
+.logo {
+  user-select: none;
+  cursor: pointer;
+}
+
 .button {
   font-size: 1.7rem;
   font-family: "Georgia";

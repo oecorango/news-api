@@ -149,6 +149,11 @@ img {
   color: #292929;
 }
 
+.logo {
+  user-select: none;
+  cursor: pointer;
+}
+
 .our-friends {
   background-color: #F6F6F6;
 }
