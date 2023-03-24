@@ -287,10 +287,6 @@ img {
   box-sizing: border-box;
 }
 
-.header {
-  background: url("../../assets/image/background/start-screen-gradient-background.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 100%, #262425 100%), #211F20;
-  background-size: cover;
-}
 .header.pets {
   background: #FFFFFF;
 }
