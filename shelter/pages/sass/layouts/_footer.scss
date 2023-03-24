@@ -1,6 +1,6 @@
 .footer {
-	background: url('../../assets/image/background/footer-background.png');
-	background-repeat: no-repeat;
+	background: url('../../assets/image/background/footer-gradient-background.png'),
+	radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 	background-size: cover;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .footer__address {
-	padding-left: 15px;
+	padding-right: 6px;
 }
 
 .footer__contacts > h2,
@@ -24,17 +24,19 @@
 	padding-top: 16px;
 }
 
-
-address{
+address > a {
 	display: flex;
 	align-items: center;
+	text-decoration: none;
 }
 
-address > a {
+address > a > img {
+	padding-right: 20px;
+}
+
+address > a > p {
 	@include font($family: 'Georgia', $size: 2rem, $height: 115%, $letter: 0.06em);
-	text-decoration: none;
 	color: $color-primary;
-	padding: 0 20px;
 }
 
 .mail__ico {
@@ -56,9 +58,9 @@ address > a {
 }
 
 .footer__mail {
-	padding: 43px 0;
+	padding: 42px 0;
 }
 
 .footer__geo {
-	padding: 33px 0;
+	padding: 32px 0;
 }

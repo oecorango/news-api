@@ -18,7 +18,7 @@ h2 {
 }
 
 h3 {
-	@include font ($family: 'Georgia', $size: 2rem, $height: 2.3, $letter: 0.06em);
+	@include font ($family: 'Georgia', $size: 2rem, $height: 115%, $letter: 0.06em);
 	color: $color-dark-l;
 }
 
@@ -29,6 +29,4 @@ p {
 
 img {
 	overflow: hidden;
-	min-width: 100%;
-	height: auto;
 }

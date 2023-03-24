@@ -26,15 +26,19 @@
 .credit-card__ico {
 	display: flex;
 	min-width: auto;
-	width: 30px;
+	width: 36px;
 	height: 23px;
-	padding: 10px 15px;
+	padding: 0 14px;
+}
+
+.form__credit-card {
+	width: 100%;
 }
 
 #credit-card-input {
 	display: flex;
 	background-color: $color-primary;
-	width: 80%;
+	width: 95%;
 	height: 23px;
 	border: none;
 	@include font($family: 'Georgia', $size: 2rem, $height: 115%, $letter: 0.06em);

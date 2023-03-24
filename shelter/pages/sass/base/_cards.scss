@@ -8,7 +8,7 @@
 	user-select: none;
 	cursor: pointer;
 	&.pets {
-		margin-bottom: 32px;
+		margin-bottom: 30px;
 	
 	}
 	&:hover > button {
@@ -19,5 +19,5 @@
 }
 
 .pets-card-title {
-	padding: 18px 0;
+	padding: 30px 0;
 }
