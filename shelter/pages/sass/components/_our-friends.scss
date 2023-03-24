@@ -30,7 +30,7 @@
 	display: flex;
 }
 
-.our-friends-pats__navigation {
+.our-friends-pets__navigation {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -54,6 +54,10 @@
 		border: 2px solid $color-primary;
 	}
 	&.passive {
+		&:hover {
+			background-color: $color-light-l;
+		}
+		cursor: auto;
 		color: $color-dark-s;
 		border: 2px solid $color-dark-s;
 	}
