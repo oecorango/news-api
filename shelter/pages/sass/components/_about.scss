@@ -6,16 +6,33 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 80px 215px 100px;
+	@include media-tablet {
+		flex-direction: column-reverse;
+		align-items: center;
+		padding: 80px 169px 100px;
+	}
 }
 
 .about__img {
 	display: flex;
+	max-width: 45%;
+	align-items: center;
+	@include media-tablet {
+		max-width: 100%;
+	}
 }
 
 .about__content {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 430px;
-	padding: 14px 0;
+	max-width: 50.5%;
+	padding: 14px 0; 
+	@include media-tablet {
+		padding: 0 0 82px; 
+		max-width: 100%;
+		p {
+			padding-top: 24px;
+		}
+	}
 }

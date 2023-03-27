@@ -5,12 +5,14 @@
 .donation__wrapper {
 	display: flex;
 	padding: 80px 183px 100px;
+	// flex-flow: column;
 }
 
 .donation__content {
 	display: flex;
 	flex-direction: column;
 	padding: 0 0 0 30px;
+	width: 42%;
 }
 
 .donation__credit-card {
@@ -59,5 +61,5 @@
 .donation__img {
 	display: flex;
 	align-items: center;
+	width: 56%;
 }
-

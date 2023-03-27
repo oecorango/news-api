@@ -12,6 +12,9 @@
 	&.pets {
 		padding: 24px 40px 26px;
 	}
+	@include media-tablet {
+		padding: 24px 30px;
+	}
 }
 
 

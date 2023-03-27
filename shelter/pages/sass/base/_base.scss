@@ -1,6 +1,8 @@
 html {
 	font-size: 10px;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	margin-right: calc(-1 * (100vw - 100%));
 }
 
 * {
@@ -29,4 +31,5 @@ p {
 
 img {
 	overflow: hidden;
+	max-width: 100%;
 }
