@@ -10,6 +10,9 @@
 	&.pets {
 		padding: 82px 39px 101px;
 	}
+	@include media-tablet {
+		padding: 80px 30px 100px;
+	}
 }
 
 .our-friends__header {
@@ -19,7 +22,7 @@
 	text-align: center;
 }
 
-.pets__galery {
+.pets__gallery {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;

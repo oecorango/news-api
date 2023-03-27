@@ -475,6 +475,11 @@ img {
 .our-friends__wrapper.pets {
   padding: 82px 39px 101px;
 }
+@media (max-width: 1000px) {
+  .our-friends__wrapper {
+    padding: 80px 30px 100px;
+  }
+}
 
 .our-friends__header {
   display: flex;
@@ -483,7 +488,7 @@ img {
   text-align: center;
 }
 
-.pets__galery {
+.pets__gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -623,9 +628,21 @@ img {
   justify-content: space-between;
   padding: 40px 40px 0;
 }
+@media (max-width: 1000px) {
+  .footer__wrapper {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px 47px 0;
+  }
+}
 
 .footer__address {
   padding-right: 6px;
+}
+@media (max-width: 1000px) {
+  .footer__address {
+    padding-right: 0;
+  }
 }
 
 .footer__contacts > h2,
@@ -636,6 +653,12 @@ img {
 .footer__contacts,
 .footer__address {
   padding-top: 16px;
+}
+@media (max-width: 1000px) {
+  .footer__contacts,
+  .footer__address {
+    width: 45%;
+  }
 }
 
 address > a {
@@ -682,6 +705,12 @@ address > a > p {
 
 .footer__geo {
   padding: 32px 0;
+}
+
+@media (max-width: 1000px) {
+  .footer__wrapper > div > img {
+    padding-top: 65px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

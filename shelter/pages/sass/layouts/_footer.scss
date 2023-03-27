@@ -8,10 +8,18 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 40px 40px 0;
+	@include media-tablet {
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 15px 47px 0;
+	}
 }
 
 .footer__address {
 	padding-right: 6px;
+	@include media-tablet {
+		padding-right: 0;
+	}
 }
 
 .footer__contacts > h2,
@@ -22,6 +30,9 @@
 .footer__contacts,
 .footer__address {
 	padding-top: 16px;
+	@include media-tablet {
+		width: 45%;
+	}
 }
 
 address > a {
@@ -63,4 +74,10 @@ address > a > p {
 
 .footer__geo {
 	padding: 32px 0;
+}
+
+.footer__wrapper > div > img {
+	@include media-tablet {
+		padding-top: 65px;
+	}	
 }
