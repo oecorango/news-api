@@ -504,14 +504,13 @@ img {
   display: block;
   text-align: center;
   background-color: #FAFAFA;
-  width: 270px;
-  height: 435px;
   border-radius: 9px;
   user-select: none;
   cursor: pointer;
 }
 .cards.pets {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+  width: 270px;
 }
 .cards:hover > button {
   background: #FDDCC4;
@@ -657,7 +656,7 @@ img {
   .about__wrapper {
     flex-direction: column-reverse;
     align-items: center;
-    padding: 80px 169px 100px;
+    padding: 80px 169px 98px;
   }
 }
 
@@ -704,7 +703,7 @@ img {
 }
 @media (max-width: 1000px) {
   .our-friends__wrapper {
-    padding: 80px 30px 100px;
+    padding: 82px 30px 100px;
   }
 }
 
@@ -716,10 +715,12 @@ img {
 }
 
 .pets__gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  width: 100%;
   justify-content: space-between;
   padding: 58px 0 30px;
+  overflow: hidden;
 }
 
 .our-friends_nav {

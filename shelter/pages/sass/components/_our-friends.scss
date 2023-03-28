@@ -11,7 +11,7 @@
 		padding: 82px 39px 101px;
 	}
 	@include media-tablet {
-		padding: 80px 30px 100px;
+		padding: 82px 30px 100px;
 	}
 }
 
@@ -23,10 +23,12 @@
 }
 
 .pets__gallery {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 270px);
+	width: 100%;
 	justify-content: space-between;
 	padding: 58px 0 30px;
+	overflow: hidden;
 }
 
 .our-friends_nav {

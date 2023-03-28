@@ -2,13 +2,15 @@
 	display: block;
 	text-align: center;
 	background-color: $color-light-s;
-	width: 270px;
-	height: 435px;
+	// width: 270px;
+	// height: 435px;
 	border-radius: 9px;
 	user-select: none;
 	cursor: pointer;
 	&.pets {
-		margin-bottom: 30px;
+		margin-bottom: 60px;
+		width: 270px;
+
 	}
 	&:hover > button {
 		background: $color-primary-light;
