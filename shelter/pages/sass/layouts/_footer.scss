@@ -11,7 +11,11 @@
 	@include media-tablet {
 		flex-wrap: wrap;
 		justify-content: space-around;
-		padding: 15px 47px 0;
+		padding: 30px 47px 0;
+	}
+	@include media-mobile {
+		flex-direction: column;
+		padding: 30px 10px 0;
 	}
 }
 
@@ -29,9 +33,32 @@
 
 .footer__contacts,
 .footer__address {
+	width: 302px;
 	padding-top: 16px;
 	@include media-tablet {
 		width: 45%;
+		padding-top: 0;
+	}
+	@include media-mobile {
+		width: 100%;
+		text-align: center;
+		padding-bottom: 40px;
+	}
+}
+
+.footer__address {
+	padding-right: 23px;
+	@include media-tablet {
+		padding-right: 0;
+		h2 {
+			padding-left: 2px;
+		}
+	}
+	@include media-mobile {
+		h2 {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
 	}
 }
 
@@ -39,6 +66,9 @@ address > a {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
+	@include media-mobile {
+		justify-content: center;
+	}
 }
 
 address > a > img {
@@ -70,14 +100,37 @@ address > a > p {
 
 .footer__mail {
 	padding: 42px 0;
+	@include media-mobile {
+		padding: 43px 0;
+	}
 }
 
 .footer__geo {
 	padding: 32px 0;
+	@include media-mobile {
+		padding: 39px 0;
+	}
 }
 
-.footer__wrapper > div > img {
+.footer__address > address > a {
+	@include media-mobile {
+		justify-content: flex-start;
+		p {
+			text-align: start;
+		} 
+	}
+}
+
+.footer__img {
+	display: flex;
+	justify-content: center;
 	@include media-tablet {
 		padding-top: 65px;
+	}	
+	@include media-mobile {
+		padding-top: 0px;
+		img {
+			width: 88%;
+		}
 	}	
 }

@@ -8,8 +8,11 @@
 	padding: 80px 215px 100px;
 	@include media-tablet {
 		flex-direction: column-reverse;
-		align-items: center;
 		padding: 80px 169px 98px;
+	}
+	@include media-mobile {
+		text-align: center;
+		padding: 41px 25px 45px;
 	}
 }
 
@@ -18,7 +21,13 @@
 	max-width: 45%;
 	align-items: center;
 	@include media-tablet {
+		justify-content: center;
 		max-width: 100%;
+	}
+	@include media-mobile {
+		img {
+			max-width: 96%;
+		}
 	}
 }
 
@@ -33,6 +42,16 @@
 		max-width: 100%;
 		p {
 			padding-top: 24px;
+		}
+	}
+	@include media-mobile {
+		padding: 0 0 42px; 
+		h2 {
+			text-align: center;
+		}
+		p {
+			text-align: justify;
+			padding-top: 23px;
 		}
 	}
 }

@@ -10,6 +10,10 @@
 		align-items: center;
 		padding: 80px 132px 100px;
 	}
+	@include media-mobile {
+		text-align: center;
+		padding: 42px 10px 40px;
+	}
 }
 
 .donation__content {
@@ -23,6 +27,11 @@
 		padding-top: 1px;
 		padding-left: 0;
 	}
+	@include media-mobile {
+		align-items: center;
+		width: 100%;
+		padding-bottom: 41px;
+	}
 }
 
 .donation__credit-card {
@@ -33,6 +42,9 @@
 	border-radius: 9px;
 	width: 349px;
 	height: 43px;
+	@include media-mobile {
+		width: 281px;
+	}
 }
 
 .credit-card__ico {
@@ -55,17 +67,30 @@
 	border: none;
 	@include font($family: 'Georgia', $size: 2rem, $height: 115%, $letter: 0.06em);
 	color: $color-dark-l;
+	@include media-mobile {
+		font-size: 1.5rem;
+		line-height: 110%;
+	}
 }
 
 .text__type-of-bank {
 	@include font($family: 'Georgia', $size: 1.5rem, $height: 110%, $letter: 0.06em);
 	color: $color-dark-m;
 	padding-top: 20px;
+	@include media-mobile {
+		line-height: 160%;
+		letter-spacing: 0;
+		padding-top: 19px;
+	}
 }
 
 .donation__text {
 	@include font($size: 1.2rem, $height: 150%, $style: italic);
 	color: $color-dark-m;
+	@include media-mobile {
+		text-align: justify;
+		padding: 0 10px;
+	}
 }
 
 .donation__img {
@@ -74,5 +99,8 @@
 	width: 56%;
 	@include media-tablet {
 		width: 100%;
+	}
+	@include media-mobile {
+		width: 88%;
 	}
 }

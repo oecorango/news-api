@@ -11,6 +11,10 @@
 		radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 		background-size: cover;
 	}
+	@include media-mobile {
+		margin-top: -160px;
+		padding-top: 160px;
+	}
 }
 
 .not-only__wrapper {
@@ -21,6 +25,9 @@
 		flex-direction: column;
 		align-items: flex-end;
 		padding: 0 30px;
+	}
+	@include media-mobile {
+		padding: 0 0;
 	}
 }
 
@@ -37,6 +44,10 @@
 			justify-content: center;
 		}
 	}
+	@include media-mobile {
+		text-align: center;
+		padding: 20px 10px 105px;
+	}
 }
 
 .not-only__img {
@@ -45,9 +56,16 @@
 	@include media-tablet {
 		max-width: 80.5%;
 	}
+	@include media-mobile {
+		max-width: 81.5%;
+		padding-right: 10px;
+	}
 }
 
 .not-only__text {
 	color: $color-dark-s;
 	padding: 41px 0;
+	@include media-mobile {
+		padding: 42px 0;
+	}
 }

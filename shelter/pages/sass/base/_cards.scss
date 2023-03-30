@@ -2,16 +2,12 @@
 	display: block;
 	text-align: center;
 	background-color: $color-light-s;
-	// width: 270px;
-	// height: 435px;
+	width: 270px;
+	height: 435px;
 	border-radius: 9px;
 	user-select: none;
 	cursor: pointer;
-	&.pets {
-		margin-bottom: 60px;
-		width: 270px;
 
-	}
 	&:hover > button {
 		background: $color-primary-light;
 		border: 2px solid $color-primary-light;
@@ -20,5 +16,7 @@
 }
 
 .pets-card-title {
+	@include font ($family: 'Georgia', $size: 2rem, $height: 115%, $letter: 0.06em);
+	color: $color-dark-l;
 	padding: 29px 0;
 }
