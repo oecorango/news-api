@@ -20,5 +20,8 @@
 		@include media-tablet {
 			padding: 24px 30px 26px;
 		}
+		@include media-mobile {
+			padding: 24px 20px 27px;
+		}
 	}
 }

@@ -18,6 +18,9 @@
 		@include media-tablet {
 			padding: 82px 94px 77px;
 		}
+		@include media-mobile {
+			padding: 42px 10px;
+		}
 	}
 }
 
@@ -47,6 +50,11 @@
 	}
 	@media (max-width: 850px) {
 		justify-content: space-between;
+	}
+	@include media-mobile {
+		grid-template-columns: repeat(1, 270px);
+		justify-content: center;
+		margin: 40px 0 14px;
 	}
 }
 
@@ -84,6 +92,9 @@
 		cursor: auto;
 		color: $color-dark-s;
 		border: 2px solid $color-dark-s;
+	}
+	@include media-mobile {
+		margin: 0 5px;
 	}
 }
 

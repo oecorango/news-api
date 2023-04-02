@@ -5,6 +5,9 @@
 	width: 100%;
 	height: 2px;
 	background-color: $color-primary;
+	&.pets {
+		background-color: $color-black;
+	}
 }
 
 .hamburger {

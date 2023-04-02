@@ -113,7 +113,7 @@ address > a > p {
 }
 
 .footer__address > address > a {
-	@include media-mobile {
+	@include media-small-mobile {
 		justify-content: flex-start;
 		p {
 			text-align: start;
@@ -130,7 +130,7 @@ address > a > p {
 	@include media-mobile {
 		padding-top: 0px;
 		img {
-			width: 88%;
+			max-width: 88%;
 		}
 	}	
 }
