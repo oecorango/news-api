@@ -9,11 +9,19 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 25px 40px 86px;
+	@include media-tablet {
+		padding: 24px 30px;
+	}
+	@include media-mobile {
+		padding: 23px 20px 37px;
+	}
 	&.pets {
 		padding: 24px 40px 26px;
+		@include media-tablet {
+			padding: 24px 30px 26px;
+		}
+		@include media-mobile {
+			padding: 24px 20px 27px;
+		}
 	}
 }
-
-
-
-
