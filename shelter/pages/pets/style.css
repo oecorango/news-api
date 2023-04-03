@@ -648,10 +648,6 @@ img {
   }
 }
 
-.navigation {
-  display: flex;
-}
-
 .pets__header {
   font-size: 3.5rem;
   font-family: "Georgia";
@@ -660,6 +656,20 @@ img {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #545454;
+}
+@media (max-width: 725px) {
+  .pets__header {
+    font-size: 2.5rem;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+}
+
+.navigation {
+  display: flex;
 }
 
 .navigation__list {
