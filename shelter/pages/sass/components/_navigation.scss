@@ -1,6 +1,13 @@
+.navigation {
+	display: flex;
+}
+
 .navigation__list {
 	display: flex;
 	padding: 0;
+	@include hamburger-width {
+		display: none;
+	}
 }
 
 .navigation__link {
