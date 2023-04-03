@@ -101,4 +101,7 @@
 .pets__header {
 	@include font($family: 'Georgia', $size: 3.5rem, $height: 130%, $letter: 0.06em);
 	color: $color-dark-l;
+	@include media-mobile {
+		@include font($family: 'Georgia', $size: 2.5rem, $height: 130%, $letter: 0.06em);
+	}
 }
