@@ -310,7 +310,7 @@ template {
   font-family: "Georgia";
   src: url("../../assets/fonts/Georgia.woff2");
 }
-.nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .our-friends-pets__navigation, .button:hover, .cards:hover > button {
+.nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .our-friends-pets__navigation, .button:hover, .cards:hover > button, .cards:hover, .cards {
   transition: all 0.5s ease-out;
 }
 
@@ -407,6 +407,9 @@ img {
   border-radius: 9px;
   user-select: none;
   cursor: pointer;
+}
+.cards:hover {
+  transform: scale(1.02);
 }
 .cards:hover > button {
   background: #FDDCC4;
@@ -520,7 +523,7 @@ img {
   bottom: -2px;
   left: 0;
 }
-@media (max-width: 725px) {
+@media (max-width: 767px) {
   .hamburger {
     display: inline-block;
   }
@@ -596,7 +599,7 @@ img {
     justify-content: space-between;
   }
 }
-@media (max-width: 725px) {
+@media (max-width: 750px) {
   .pets__gallery {
     grid-template-columns: repeat(1, 270px);
     justify-content: center;
@@ -653,7 +656,7 @@ img {
   display: flex;
   padding: 0;
 }
-@media (max-width: 725px) {
+@media (max-width: 767px) {
   .navigation__list {
     display: none;
   }
@@ -759,6 +762,18 @@ img {
 .footer {
   background: url("../../assets/image/background/footer-gradient-background.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
   background-size: cover;
+}
+@media (max-width: 1000px) {
+  .footer {
+    background: url("../../assets/image/background/footer-gradient-background-768.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    background-size: cover;
+  }
+}
+@media (max-width: 725px) {
+  .footer {
+    background: url("../../assets/image/background/footer-gradient-background-320.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    background-size: cover;
+  }
 }
 
 .footer__wrapper {

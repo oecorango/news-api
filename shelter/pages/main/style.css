@@ -310,7 +310,7 @@ template {
   font-family: "Georgia";
   src: url("../../assets/fonts/Georgia.woff2");
 }
-.our-friends-pets__navigation, .nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .cards:hover > button, .carousel__prev,
+.our-friends-pets__navigation, .nav__link:hover, .nav__link:after, .nav__link.active, .nav__link, .cards:hover > button, .cards:hover, .cards, .carousel__prev,
 .carousel__next, .button:hover {
   transition: all 0.5s ease-out;
 }
@@ -498,26 +498,61 @@ img {
 }
 
 .carousel__list {
-  display: block;
+  display: inline-flex;
   list-style-type: none;
-  width: 9999px;
-  padding: 0 7px;
+  justify-content: space-around;
+  gap: 90px;
+  width: 100%;
+  padding: 0;
   font-size: 0;
-  margin-left: 0;
-  overflow: hidden;
+  margin-left: 900px;
 }
-.carousel__list li {
-  display: inline-block;
-  padding: 0 45px;
-}
-@media (max-width: 1000px) {
-  .carousel__list li {
-    padding: 0 40px 0 0;
+@media (max-width: 1200px) {
+  .carousel__list {
+    gap: 50px;
+    margin-left: 802px;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1110px) {
   .carousel__list {
-    padding: 0 10px;
+    gap: 30px;
+    margin-left: 750px;
+  }
+}
+@media (max-width: 1060px) {
+  .carousel__list {
+    gap: 120px;
+    margin-left: 1170px;
+  }
+}
+@media (max-width: 860px) {
+  .carousel__list {
+    gap: 60px;
+    margin-left: 990px;
+  }
+}
+@media (max-width: 790px) {
+  .carousel__list {
+    gap: 40px;
+    margin-left: 930px;
+  }
+}
+@media (max-width: 760px) {
+  .carousel__list {
+    gap: 20px;
+    margin-left: 870px;
+  }
+}
+@media (max-width: 740px) {
+  .carousel__list {
+    gap: 12px;
+    margin-left: 845px;
+  }
+}
+@media (max-width: 725px) {
+  .carousel__list {
+    gap: 250px;
+    margin-left: 1820px;
   }
 }
 
@@ -559,6 +594,9 @@ img {
   border-radius: 9px;
   user-select: none;
   cursor: pointer;
+}
+.cards:hover {
+  transform: scale(1.02);
 }
 .cards:hover > button {
   background: #FDDCC4;
@@ -602,7 +640,7 @@ img {
   bottom: -2px;
   left: 0;
 }
-@media (max-width: 725px) {
+@media (max-width: 767px) {
   .hamburger {
     display: inline-block;
   }
@@ -620,7 +658,7 @@ img {
   display: flex;
   padding: 0;
 }
-@media (max-width: 725px) {
+@media (max-width: 767px) {
   .navigation__list {
     display: none;
   }
@@ -701,6 +739,8 @@ img {
   .not-only {
     margin-top: -160px;
     padding-top: 160px;
+    background: url("../../assets/image/background/start-screen-gradient-background-320.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+    background-size: cover;
   }
 }
 
@@ -905,7 +945,7 @@ img {
     justify-content: space-between;
   }
 }
-@media (max-width: 725px) {
+@media (max-width: 750px) {
   .pets__gallery {
     grid-template-columns: repeat(1, 270px);
     justify-content: center;
@@ -1202,6 +1242,18 @@ img {
 .footer {
   background: url("../../assets/image/background/footer-gradient-background.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
   background-size: cover;
+}
+@media (max-width: 1000px) {
+  .footer {
+    background: url("../../assets/image/background/footer-gradient-background-768.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    background-size: cover;
+  }
+}
+@media (max-width: 725px) {
+  .footer {
+    background: url("../../assets/image/background/footer-gradient-background-320.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    background-size: cover;
+  }
 }
 
 .footer__wrapper {

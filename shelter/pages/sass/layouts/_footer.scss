@@ -2,6 +2,16 @@
 	background: url('../../assets/image/background/footer-gradient-background.png'),
 	radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 	background-size: cover;
+	@include media-tablet {
+		background: url('../../assets/image/background/footer-gradient-background-768.png'),
+		radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+		background-size: cover;
+	}
+	@include media-mobile {
+		background: url('../../assets/image/background/footer-gradient-background-320.png'),
+		radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+		background-size: cover;
+	}
 }
 
 .footer__wrapper {

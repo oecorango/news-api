@@ -51,7 +51,7 @@
 	@media (max-width: 850px) {
 		justify-content: space-between;
 	}
-	@include media-mobile {
+	@media (max-width: 750px) {
 		grid-template-columns: repeat(1, 270px);
 		justify-content: center;
 		margin: 40px 0 14px;

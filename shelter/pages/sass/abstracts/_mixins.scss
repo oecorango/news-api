@@ -15,6 +15,10 @@
 	@media (max-width: $tablet-width) { @content; }
 }
 
+@mixin hamburger-width {
+	@media (max-width: $hamburger-width) { @content; }
+}
+
 @mixin media-mobile {
 	@media (max-width: $mobile-width) { @content; }
 }

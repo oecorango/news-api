@@ -5,7 +5,7 @@
 .navigation__list {
 	display: flex;
 	padding: 0;
-	@include media-mobile {
+	@include hamburger-width {
 		display: none;
 	}
 }
