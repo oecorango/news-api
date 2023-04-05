@@ -1,4 +1,4 @@
-const ourPets = [
+const pets = [
   {
     "name": "Jennifer",
     "img": "../../assets/images/jennifer.png",

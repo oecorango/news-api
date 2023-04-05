@@ -51,9 +51,16 @@ anchors.forEach(link => {
 const CAROUSEL = document.querySelector('.carousel__list')
 const BTN_LEFT = document.querySelector('.carousel__prev');
 const BTN_RIGHT = document.querySelector('.carousel__next');
-const card = document.querySelectorAll('div.cards');
+const ITEM_LEFT = document.querySelector('#item-left');
+const ITEM_RIGHT = document.querySelector('#item-right');
+// const card = document.querySelectorAll('div.cards');
 
-console.log(card[0], card[1], card[1]);
+
+const createCardTemplate = () => {
+	const card = document.createElement('div');
+	card.classList.add('cards');
+	return card;
+}
 
 const moveLeft = () => {
 	CAROUSEL.classList.add('transition-left');
@@ -71,12 +78,26 @@ BTN_LEFT.addEventListener('click', moveLeft);
 BTN_RIGHT.addEventListener('click', moveRight)
 
 CAROUSEL.addEventListener('animationend', (event) => {
+	let changedItem;
 	if (event.animationName === 'move-left') {
 		CAROUSEL.classList.remove('transition-left');
+		changedItem = ITEM_LEFT;
+		CAROUSEL.classList.remove('transition-right');
+		document.querySelector('#item-active').innerHTML = ITEM_LEFT.innerHTML;
+
 	} else {
 		CAROUSEL.classList.remove('transition-right');
+		changedItem = ITEM_RIGHT;
+		CAROUSEL.classList.remove('transition-left');
+		document.querySelector('#item-active').innerHTML = ITEM_RIGHT.innerHTML;
 	}
-	
+
+	changedItem.innerHTML = '';
+	for (let i = 0; i < 3; i++) {
+		const card = createCardTemplate();
+		card.innerText = Math.floor(Math.random() * 8);
+		changedItem.appendChild(card);
+	}
 
 	BTN_LEFT.addEventListener('click', moveLeft);
 	BTN_RIGHT.addEventListener('click', moveRight);
