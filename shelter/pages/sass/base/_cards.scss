@@ -4,6 +4,7 @@
 	background-color: $color-light-s;
 	width: 270px;
 	height: 435px;
+	margin: 0 45px;
 	border-radius: 9px;
 	user-select: none;
 	cursor: pointer;
@@ -16,6 +17,9 @@
 		background: $color-primary-light;
 		border: 2px solid $color-primary-light;
 		@extend %transition;
+	}
+	&.pets {
+		margin: 0;
 	}
 }
 

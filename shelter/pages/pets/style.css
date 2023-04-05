@@ -412,6 +412,7 @@ img {
   background-color: #FAFAFA;
   width: 270px;
   height: 435px;
+  margin: 0 45px;
   border-radius: 9px;
   user-select: none;
   cursor: pointer;
@@ -422,6 +423,9 @@ img {
 .cards:hover > button {
   background: #FDDCC4;
   border: 2px solid #FDDCC4;
+}
+.cards.pets {
+  margin: 0;
 }
 
 .pets-card-title {

@@ -1,6 +1,6 @@
 .carousel {
 	display: flex;
-	overflow: hidden;
+	// overflow: hidden;
 	width: 100%;
 	height: 435px;
 	padding: 60px 0;
@@ -12,8 +12,9 @@
 	}
 }
 
-.carousel__content {
-	display: block;
+.carousel__wrapper {
+	display: flex;
+	justify-content: center;
 	overflow: hidden;
 	@include media-mobile {
 		width: 97%;
@@ -26,27 +27,30 @@
 	display: inline-flex;
 	list-style-type: none;
 	justify-content: center;
-	gap: 90px;
+	position: relative;
 	width: 100%;
 	padding: 0;
 	font-size: 0;
-	margin-left: 180px;
-	@media (max-width: 1200px) {
-		gap: 160px;
-		margin-left: 0px;
-	}
-	@media (max-width: 880px) {
-		gap: 60px;
-		margin-left: 0px;
-	}
-	@media (max-width: 780px) {
-		gap: 30px;
-		margin-left: 0px;
-	}
-	@media (max-width: 740px) {
-		gap: 300px;
-		margin-left: 285px;
-	}
+	margin-left: 0%;
+	// @media (max-width: 1100px) {
+	// 	width: 80%;
+	// }
+	// @media (max-width: 880px) {
+	// 	gap: 60px;
+	// 	margin-left: 0px;
+	// }
+	// @media (max-width: 780px) {
+	// 	gap: 30px;
+	// 	margin-left: 0px;
+	// }
+	// @media (max-width: 740px) {
+	// 	gap: 300px;
+	// 	margin-left: 285px;
+	// }
+}
+
+.carousel__item {
+	display: flex;
 }
 
 .card {
@@ -75,5 +79,26 @@
 	}
 }
 
+.carousel__prev-ico {
+	max-width: 14px;
+}
 
+@keyframes move-right {
+	from {left: 0%;}
+	to {left: -100%;}
+}
 
+.transition-right {
+	animation-name: move-right;
+	animation-duration: 3s;
+}
+
+@keyframes move-left {
+	from {left: 0%;}
+	to {left: 100%;}
+}
+
+.transition-left {
+	animation-name: move-left;
+	animation-duration: 3s;
+}

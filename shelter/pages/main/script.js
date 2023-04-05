@@ -3,7 +3,6 @@
 const hamburgerContainer = document.querySelector('.navigation__container');
 const hamburgerMenu = document.querySelector('.navigation__list');
 const hamburgerButton = document.querySelector('.hamburger__icon');
-
 const body = document.body;
 
 if (hamburgerMenu && hamburgerButton) {
@@ -37,7 +36,6 @@ if (hamburgerMenu && hamburgerButton) {
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 anchors.forEach(link => {
-	console.log(link)
 	link.addEventListener('click', event => {
 		event.preventDefault();
 		const sectionID = link.getAttribute('href').substring(1);
@@ -46,4 +44,40 @@ anchors.forEach(link => {
 			block: 'start',
 		})
 	})
+})
+
+// -------------------------slider----------------------------
+
+const CAROUSEL = document.querySelector('.carousel__list')
+const BTN_LEFT = document.querySelector('.carousel__prev');
+const BTN_RIGHT = document.querySelector('.carousel__next');
+const card = document.querySelectorAll('div.cards');
+
+console.log(card[0], card[1], card[1]);
+
+const moveLeft = () => {
+	CAROUSEL.classList.add('transition-left');
+	BTN_LEFT.removeEventListener('click', moveLeft);
+	BTN_RIGHT.removeEventListener('click', moveRight);
+}
+
+const moveRight = () => {
+	CAROUSEL.classList.add('transition-right');
+	BTN_RIGHT.removeEventListener('click', moveRight);
+	BTN_LEFT.removeEventListener('click', moveLeft);
+}
+
+BTN_LEFT.addEventListener('click', moveLeft);
+BTN_RIGHT.addEventListener('click', moveRight)
+
+CAROUSEL.addEventListener('animationend', (event) => {
+	if (event.animationName === 'move-left') {
+		CAROUSEL.classList.remove('transition-left');
+	} else {
+		CAROUSEL.classList.remove('transition-right');
+	}
+	
+
+	BTN_LEFT.addEventListener('click', moveLeft);
+	BTN_RIGHT.addEventListener('click', moveRight);
 })

@@ -3,7 +3,6 @@
 const hamburgerContainer = document.querySelector('.navigation__container');
 const hamburgerMenu = document.querySelector('.navigation__list');
 const hamburgerButton = document.querySelector('.hamburger__icon');
-
 const body = document.body;
 
 if (hamburgerMenu && hamburgerButton) {
