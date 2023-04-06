@@ -154,8 +154,6 @@ const ITEM_RIGHT = document.querySelector('#item-right');
 const ITEM_ACTIVE = document.querySelector('#item-active');
 const windowInnerWidth = document.documentElement.clientWidth;
 
-console.log(windowInnerWidth)
-
 const idCardNumbers = [];
 for (let i = 0; idCardNumbers.length < 6; i++) {
 	let number = Math.floor(Math.random() * 8);
