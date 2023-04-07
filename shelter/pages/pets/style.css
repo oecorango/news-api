@@ -310,7 +310,7 @@ template {
   font-family: "Georgia";
   src: url("../../assets/fonts/Georgia.woff2");
 }
-.navigation__container.active, .navigation__container, .our-friends-pets__navigation, .hamburger__icon, .button:hover, .cards:hover > button, .cards:hover, .cards {
+.navigation__container.active, .navigation__container, .our-friends-pets__navigation, .hamburger__icon, .cards:hover > button, .cards:hover, .cards {
   transition: all 0.5s ease-out;
 }
 
@@ -417,6 +417,11 @@ img {
   user-select: none;
   cursor: pointer;
 }
+@media (max-width: 1190px) {
+  .cards {
+    margin: 0 20px;
+  }
+}
 .cards:hover {
   transform: scale(1.02);
 }
@@ -455,9 +460,6 @@ img {
   border: none;
   user-select: none;
   transition: all 0.5s;
-}
-.button:hover {
-  background: #FDDCC4;
 }
 
 .button__carousel {

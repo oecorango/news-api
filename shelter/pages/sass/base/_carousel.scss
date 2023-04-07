@@ -32,25 +32,12 @@
 	padding: 0;
 	font-size: 0;
 	margin-left: 0%;
-	// @media (max-width: 1100px) {
-	// 	width: 80%;
-	// }
-	// @media (max-width: 880px) {
-	// 	gap: 60px;
-	// 	margin-left: 0px;
-	// }
-	// @media (max-width: 780px) {
-	// 	gap: 30px;
-	// 	margin-left: 0px;
-	// }
-	// @media (max-width: 740px) {
-	// 	gap: 300px;
-	// 	margin-left: 285px;
-	// }
-}
-
-.carousel__item {
-	display: flex;
+	@media (max-width: 1190px) {
+		gap: 180px;
+	}
+	.carousel__item {
+		display: flex;
+	}
 }
 
 .card {
@@ -69,9 +56,11 @@
 	cursor: pointer;
 	user-select: none;
 	@extend %transition;
-	&:hover {
-		background-color: $color-primary-light;
-		border: 2px solid $color-primary-light;
+	@media (min-width: 769px) {
+		&:hover {
+			background-color: $color-primary-light;
+			border: 2px solid $color-primary-light;
+		}
 	}
 	@include media-mobile {
 		margin-left: 39px;
@@ -83,22 +72,69 @@
 	max-width: 14px;
 }
 
-@keyframes move-right {
+#item-left,
+#item-active,
+#item-right {
+	@media (max-width: 1190px) {
+		div:first-child {
+			display: none;
+		}
+	}
+	@media (max-width: 767px) {
+		div:last-child {
+			display: none;
+		}
+	}
+}
+
+@keyframes move-right-3card {
 	from {left: 0%;}
 	to {left: -1080px;}
 }
-
-.transition-right {
-	animation-name: move-right;
-	animation-duration: 1s;
+@keyframes move-right-2card {
+	from {left: 0%;}
+	to {left: -800px;}
+}
+@keyframes move-right-1card {
+	from {left: 0%;}
+	to {left: -490px;}
 }
 
-@keyframes move-left {
+@keyframes move-left-3card {
 	from {left: 0%;}
 	to {left: 1080px;}
 }
+@keyframes move-left-2card {
+	from {left: 0%;}
+	to {left: 800px;}
+}
+@keyframes move-left-1card {
+	from {left: 0%;}
+	to {left: 490px;}
+}
+
+.transition-right {
+	animation-name: move-right-3card;
+	animation-duration: 1s;
+	@media (max-width: 1190px) {
+		animation-name: move-right-2card;
+		animation-duration: 1s;
+	}
+	@media (max-width: 767px) {
+		animation-name: move-right-1card;
+		animation-duration: 1s;
+	}
+}
 
 .transition-left {
-	animation-name: move-left;
+	animation-name: move-left-3card;
 	animation-duration: 1s;
+	@media (max-width: 1190px) {
+		animation-name: move-left-2card;
+		animation-duration: 1s;
+	}
+	@media (max-width: 767px) {
+		animation-name: move-left-1card;
+		animation-duration: 1s;
+	}
 }

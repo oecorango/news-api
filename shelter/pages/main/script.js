@@ -152,7 +152,6 @@ const BTN_RIGHT = document.querySelector('.carousel__next');
 const ITEM_LEFT = document.querySelector('#item-left');
 const ITEM_RIGHT = document.querySelector('#item-right');
 const ITEM_ACTIVE = document.querySelector('#item-active');
-const windowInnerWidth = document.documentElement.clientWidth;
 
 const idCardNumbers = [];
 for (let i = 0; idCardNumbers.length < 6; i++) {
@@ -165,7 +164,6 @@ for (let i = 0; idCardNumbers.length < 6; i++) {
 		}
 	}
 }
-console.log(idCardNumbers)
 
 const createCardTemplate = (number) => {
 	const numberCard = number;
@@ -228,13 +226,12 @@ BTN_RIGHT.addEventListener('click', moveRight);
 
 CAROUSEL.addEventListener('animationend', (event) => {
 	let changedItem;
-	if (event.animationName === 'move-left') {
+	if (event.animationName === 'move-left-3card' || event.animationName === 'move-left-2card' || event.animationName ===  'move-left-1card') {
 		CAROUSEL.classList.remove('transition-left');
 		changedItem = ITEM_LEFT;
 		CAROUSEL.classList.remove('transition-right');
 		ITEM_RIGHT.innerHTML = ITEM_ACTIVE.innerHTML;
 		ITEM_ACTIVE.innerHTML = ITEM_LEFT.innerHTML;
-
 	} else {
 		CAROUSEL.classList.remove('transition-right');
 		changedItem = ITEM_RIGHT;
@@ -260,3 +257,5 @@ CAROUSEL.addEventListener('animationend', (event) => {
 	BTN_LEFT.addEventListener('click', moveLeft);
 	BTN_RIGHT.addEventListener('click', moveRight);
 })
+
+// -------------------------pop-app----------------------------

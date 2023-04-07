@@ -311,7 +311,7 @@ template {
   src: url("../../assets/fonts/Georgia.woff2");
 }
 .our-friends-pets__navigation, .navigation__container.active, .navigation__container, .hamburger__icon, .cards:hover > button, .cards:hover, .cards, .carousel__prev,
-.carousel__next, .button:hover {
+.carousel__next {
   transition: all 0.5s ease-out;
 }
 
@@ -458,9 +458,6 @@ img {
   user-select: none;
   transition: all 0.5s;
 }
-.button:hover {
-  background: #FDDCC4;
-}
 
 .button__carousel {
   width: 18.7rem;
@@ -515,8 +512,12 @@ img {
   font-size: 0;
   margin-left: 0%;
 }
-
-.carousel__item {
+@media (max-width: 1190px) {
+  .carousel__list {
+    gap: 180px;
+  }
+}
+.carousel__list .carousel__item {
   display: flex;
 }
 
@@ -536,10 +537,12 @@ img {
   cursor: pointer;
   user-select: none;
 }
-.carousel__prev:hover,
-.carousel__next:hover {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+@media (min-width: 769px) {
+  .carousel__prev:hover,
+  .carousel__next:hover {
+    background-color: #FDDCC4;
+    border: 2px solid #FDDCC4;
+  }
 }
 @media (max-width: 725px) {
   .carousel__prev,
@@ -553,7 +556,22 @@ img {
   max-width: 14px;
 }
 
-@keyframes move-right {
+@media (max-width: 1190px) {
+  #item-left div:first-child,
+  #item-active div:first-child,
+  #item-right div:first-child {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  #item-left div:last-child,
+  #item-active div:last-child,
+  #item-right div:last-child {
+    display: none;
+  }
+}
+
+@keyframes move-right-3card {
   from {
     left: 0%;
   }
@@ -561,12 +579,23 @@ img {
     left: -1080px;
   }
 }
-.transition-right {
-  animation-name: move-right;
-  animation-duration: 1s;
+@keyframes move-right-2card {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -800px;
+  }
 }
-
-@keyframes move-left {
+@keyframes move-right-1card {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -490px;
+  }
+}
+@keyframes move-left-3card {
   from {
     left: 0%;
   }
@@ -574,9 +603,54 @@ img {
     left: 1080px;
   }
 }
-.transition-left {
-  animation-name: move-left;
+@keyframes move-left-2card {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 800px;
+  }
+}
+@keyframes move-left-1card {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 490px;
+  }
+}
+.transition-right {
+  animation-name: move-right-3card;
   animation-duration: 1s;
+}
+@media (max-width: 1190px) {
+  .transition-right {
+    animation-name: move-right-2card;
+    animation-duration: 1s;
+  }
+}
+@media (max-width: 767px) {
+  .transition-right {
+    animation-name: move-right-1card;
+    animation-duration: 1s;
+  }
+}
+
+.transition-left {
+  animation-name: move-left-3card;
+  animation-duration: 1s;
+}
+@media (max-width: 1190px) {
+  .transition-left {
+    animation-name: move-left-2card;
+    animation-duration: 1s;
+  }
+}
+@media (max-width: 767px) {
+  .transition-left {
+    animation-name: move-left-1card;
+    animation-duration: 1s;
+  }
 }
 
 .cards {
@@ -589,6 +663,11 @@ img {
   border-radius: 9px;
   user-select: none;
   cursor: pointer;
+}
+@media (max-width: 1190px) {
+  .cards {
+    margin: 0 20px;
+  }
 }
 .cards:hover {
   transform: scale(1.02);
