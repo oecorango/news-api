@@ -310,7 +310,7 @@ template {
   font-family: "Georgia";
   src: url("../../assets/fonts/Georgia.woff2");
 }
-.navigation__container.active, .navigation__container, .our-friends-pets__navigation, .hamburger__icon, .cards:hover > button, .cards:hover, .cards {
+.navigation__container.active, .navigation__container, .our-friends-pets__navigation, .hamburger__icon, .button:hover, .cards:hover > button, .cards:hover, .cards {
   transition: all 0.5s ease-out;
 }
 
@@ -460,6 +460,9 @@ img {
   border: none;
   user-select: none;
   transition: all 0.5s;
+}
+.button:hover {
+  background: #FDDCC4;
 }
 
 .button__carousel {
@@ -620,6 +623,7 @@ img {
 @media (max-width: 750px) {
   .pets__gallery {
     grid-template-columns: repeat(1, 270px);
+    width: 270px;
     justify-content: center;
     margin: 40px 0 14px;
   }
@@ -644,12 +648,9 @@ img {
   user-select: none;
   color: #292929;
 }
-.our-friends-pets__navigation:hover {
+.our-friends-pets__navigation.current {
+  cursor: auto;
   background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
-}
-.our-friends-pets__navigation.active {
-  background-color: #F1CDB3;
   border: 2px solid #F1CDB3;
 }
 .our-friends-pets__navigation.passive {
@@ -659,6 +660,11 @@ img {
 }
 .our-friends-pets__navigation.passive:hover {
   background-color: #F6F6F6;
+}
+@media (min-width: 769px) {
+  .our-friends-pets__navigation:hover {
+    background-color: #FDDCC4;
+  }
 }
 @media (max-width: 725px) {
   .our-friends-pets__navigation {
@@ -684,6 +690,10 @@ img {
     line-height: 130%;
     letter-spacing: 0.06em;
   }
+}
+
+.pets__gallery__not-active {
+  display: none;
 }
 
 .navigation {

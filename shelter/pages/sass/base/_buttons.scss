@@ -9,10 +9,10 @@
 	border: none;
 	user-select: none;
 	transition: all 0.5s;
-	// &:hover {
-	// 	background: $color-primary-light;
-	// 	@extend %transition;
-	// }
+	&:hover {
+		background: $color-primary-light;
+		@extend %transition;
+	}
 
 }
 

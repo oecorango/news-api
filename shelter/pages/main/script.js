@@ -96,6 +96,9 @@ const pets = [
     "parasites": ["lice", "fleas"]
   }
 ]
+
+
+
 // -------------------------hamburger----------------------------
 
 const hamburgerContainer = document.querySelector('.navigation__container');
@@ -166,19 +169,19 @@ for (let i = 0; idCardNumbers.length < 6; i++) {
 }
 
 const createCardTemplate = (number) => {
-	const numberCard = number;
+	// const numberCard = number;
 	const card = document.createElement('div');
 	card.classList.add('cards');
-	card.id = pets[numberCard].id;
+	card.id = pets[number].id;
 
 	const img = document.createElement('img');
-	img.src = pets[numberCard].img;
+	img.src = pets[number].img;
 	img.alt = 'pet';
 	card.append(img)
 
 	const header = document.createElement('h3');
 	header.classList.add('pets-card-title');
-	header.innerText = pets[numberCard].name;
+	header.innerText = pets[number].name;
 	card.append(header);
 
 	const button = document.createElement('button');

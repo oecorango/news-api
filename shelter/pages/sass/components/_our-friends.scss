@@ -53,6 +53,7 @@
 	}
 	@media (max-width: 750px) {
 		grid-template-columns: repeat(1, 270px);
+		width: 270px;
 		justify-content: center;
 		margin: 40px 0 14px;
 	}
@@ -77,12 +78,9 @@
 	user-select: none;
 	color: $color-dark-3xl;
 	@extend %transition;
-	&:hover {
+	&.current {
+		cursor: auto;
 		background-color: $color-primary-light;
-		border: 2px solid $color-primary-light;
-	}
-	&.active {
-		background-color: $color-primary;
 		border: 2px solid $color-primary;
 	}
 	&.passive {
@@ -92,6 +90,11 @@
 		cursor: auto;
 		color: $color-dark-s;
 		border: 2px solid $color-dark-s;
+	}
+	@media (min-width: 769px) {
+		&:hover {
+			background-color: $color-primary-light;
+		}
 	}
 	@include media-mobile {
 		margin: 0 5px;
@@ -104,4 +107,8 @@
 	@include media-mobile {
 		@include font($family: 'Georgia', $size: 2.5rem, $height: 130%, $letter: 0.06em);
 	}
+}
+
+.pets__gallery__not-active {
+	display: none;
 }
