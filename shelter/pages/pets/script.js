@@ -132,66 +132,52 @@ const BTN_NEXT = document.querySelector('#btn-next');
 const BTN_LAST = document.querySelector('#btn-last');
 const PETS_GALLERY = document.querySelector('.pets__gallery');
 
-const cardsNumberArray = []; // массив с номерами карточек
+let cardsNumberArray = []; // массив с номерами повторяющихся карточек по ([[3], [3], [2]])
 
-const getPetsList = () => {  // собираем массив с уникальными значениями
-	for (let j = 0; cardsNumberArray.length < 6; j++) {
-		let array = [];
-		for (let i = 0; array.length < 8; i++) {
-			let number = Math.floor(Math.random() * 8);
-			if (array.length === 0) {
+const getPetsArray = () => {  // собираем массив с уникальными значениями ([[3], [3], [2]])
+	let array = [];
+	let subArray = [];
+	const size = 3;
+	for (let i = 0; array.length < 8; i++) {
+		let number = Math.floor(Math.random() * 8);
+		if (array.length === 0) {
+			array.push(number)
+		} if (array.indexOf(number) === -1) {
 				array.push(number)
-			} else {
-				if (array.indexOf(number) === -1) {
-					array.push(number)
-				}
-			}
 		}
-		cardsNumberArray.push(array)
+	}
+	for (let j = 0; j < Math.ceil(array.length / size); j++) {
+		subArray[j] = array.slice((j * size), (j * size) + size)
+	}
+	for (let i = 0; cardsNumberArray.length < 6; i++)	{
+		cardsNumberArray.push(subArray)
 	}
 }
-getPetsList();
 
-// const getPetsArray = () => {  // собираем массив с уникальными значениями
-// 	let array = [];
-// 	let subArray = [];
-// 	const size = 3;
-// 	for (let i = 0; array.length < 8; i++) {
-// 		let number = Math.floor(Math.random() * 8);
-// 		if (array.length === 0) {
-// 			array.push(number)
-// 		} if (array.indexOf(number) === -1) {
-// 				array.push(number)
-// 		}
-// 	}
-// 	for (let j = 0; j < Math.ceil(array.length / size); j++) {
-// 		subArray[j] = array.slice((j * size), (j * size) + size)
-// 	}
-// 	for (let j = 0; cardsNumberArray.length < 6; j++) {
-// 		cardsNumberArray.push(subArray);
-// 	}
-// }
+getPetsArray ();
 
-// getPetsArray ();
+let arrayNumberCard = cardsNumberArray.flat(1); // массив с одинаковыми последовательностями карточек делаем массивом 2-го уровня
 
-// const countPetsArray = () => {
-// 	console.log(cardsNumberArray);
-// 	subArr = [];
-// 	for (let j = 0; j < cardsNumberArray.length; j++) {
-// 		for (let i = 0; i < cardsNumberArray[j].length; i++) {
-// 			if (subArr.length < 5) {
-// 				subArr.push(cardsNumberArray[j][i]);
-// 			} else {
-// 				(cardsNumberArray[j][i] === subArr[])
-// 			}
-// 		}
-// 	}
-// 	function shuffle(array) {
-// 		array.sort(() => Math.random() - 0.5);
-// 	}
-// 	console.log(subArr)
-// }
-// countPetsArray()
+const countPetsArrayRandom = () => { // перемешиваем последовательности подмассивов
+	let subArr = []; 
+	for (let x = 0; x < arrayNumberCard.length; x++) {
+		const shuffle = (array) => {
+			let kof = array.length, j, i;
+			while (kof) {
+				i = Math.floor(Math.random() * kof--);
+				j = array[kof];
+				array[kof] = array[i];
+				array[i] = j;
+			}
+			subArr.push(...array)
+		}
+		shuffle(arrayNumberCard[x])
+	}
+	return subArr;
+}
+
+const arrayNumberCardRandom = countPetsArrayRandom();
+
 
 const createCardTemplate = (number) => { // собираем карточку
 	const card = document.createElement('div');
@@ -217,8 +203,6 @@ const createCardTemplate = (number) => { // собираем карточку
 	return card;
 }
 
-const arrayNumberCard = cardsNumberArray.flat(1); //массив делаем одноуровневым
-
 const countCardsVisible = () => { //считаем количество карт на странице для разных расширений
 	if (PETS_GALLERY.offsetWidth >= 1080) {
 		return 8;
@@ -229,7 +213,7 @@ const countCardsVisible = () => { //считаем количество карт
 	}
 }
 
-const countPages = () => (arrayNumberCard.length / countCardsVisible() - 1); // количество страниц
+const countPages = () => (arrayNumberCardRandom.length / countCardsVisible() - 1); // количество страниц
 let currentPage = 0;
 
 function displayList (arrData, activeCard, page) {  // собираем стартовый набор крточек
@@ -245,9 +229,9 @@ function displayList (arrData, activeCard, page) {  // собираем стар
 	})
 }
 
-displayList(arrayNumberCard, countCardsVisible(), currentPage)
+displayList(arrayNumberCardRandom, countCardsVisible(), currentPage)
 
-const addClassButton = () => {
+const addClassButton = () => { 		// активные и пассивные кнопки 
 	BTN_CURRENT.firstChild.innerText = currentPage + 1;
 	if (currentPage === 0) {
 		BTN_NEXT.classList.remove('passive');
@@ -267,11 +251,11 @@ const addClassButton = () => {
 	}
 }
 
-const moveNext = () => {
+const moveNext = () => {  // далее перемотка
 	if (currentPage < countPages()) {
 		currentPage++;
 		addClassButton();
-		displayList(arrayNumberCard, countCardsVisible(), currentPage);
+		displayList(arrayNumberCardRandom, countCardsVisible(), currentPage);
 	}
 }
 
@@ -279,7 +263,7 @@ const movePrev = () => {
 	if (currentPage > 0) {
 		currentPage--;
 		addClassButton();
-		displayList(arrayNumberCard, countCardsVisible(), currentPage);
+		displayList(arrayNumberCardRandom, countCardsVisible(), currentPage);
 	}
 }
 
@@ -287,7 +271,7 @@ const moveFirst = () => {
 	if (currentPage > 0) {
 		currentPage = 0;
 		addClassButton();
-		displayList(arrayNumberCard, countCardsVisible(), currentPage);
+		displayList(arrayNumberCardRandom, countCardsVisible(), currentPage);
 	}
 }
 
@@ -295,7 +279,7 @@ const moveLast = () => {
 	if (currentPage < countPages()) {
 		currentPage = countPages();
 		addClassButton();
-		displayList(arrayNumberCard, countCardsVisible(), currentPage);
+		displayList(arrayNumberCardRandom, countCardsVisible(), currentPage);
 	}
 }
 
