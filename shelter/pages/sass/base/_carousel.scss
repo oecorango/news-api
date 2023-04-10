@@ -1,6 +1,5 @@
 .carousel {
 	display: flex;
-	overflow: hidden;
 	width: 100%;
 	height: 435px;
 	padding: 60px 0;
@@ -12,8 +11,9 @@
 	}
 }
 
-.carousel__content {
-	display: block;
+.carousel__wrapper {
+	display: flex;
+	justify-content: center;
 	overflow: hidden;
 	@include media-mobile {
 		width: 97%;
@@ -25,43 +25,17 @@
 .carousel__list {
 	display: inline-flex;
 	list-style-type: none;
-	justify-content: space-around;
-	gap: 90px;
+	justify-content: center;
+	position: relative;
 	width: 100%;
 	padding: 0;
 	font-size: 0;
-	margin-left: 900px;
-	@media (max-width: 1200px) {
-		gap: 50px;
-		margin-left: 802px;
+	margin-left: 0%;
+	@media (max-width: 1190px) {
+		gap: 180px;
 	}
-	@media (max-width: 1110px) {
-		gap: 30px;
-		margin-left: 750px;
-	}
-	@media (max-width: 1060px) {
-		gap: 120px;
-		margin-left: 1170px;
-	}
-	@media (max-width: 860px) {
-		gap: 60px;
-		margin-left: 990px;
-	}
-	@media (max-width: 790px) {
-		gap: 40px;
-		margin-left: 930px;
-	}
-	@media (max-width: 760px) {
-		gap: 20px;
-		margin-left: 870px;
-	}
-	@media (max-width: 740px) {
-		gap: 12px;
-		margin-left: 845px;
-	}
-	@media (max-width: 725px) {
-		gap: 250px;
-		margin-left: 1820px;
+	.carousel__item {
+		display: flex;
 	}
 }
 
@@ -81,9 +55,11 @@
 	cursor: pointer;
 	user-select: none;
 	@extend %transition;
-	&:hover {
-		background-color: $color-primary-light;
-		border: 2px solid $color-primary-light;
+	@media (min-width: 769px) {
+		&:hover {
+			background-color: $color-primary-light;
+			border: 2px solid $color-primary-light;
+		}
 	}
 	@include media-mobile {
 		margin-left: 39px;
@@ -91,5 +67,73 @@
 	}
 }
 
+.carousel__prev-ico {
+	max-width: 14px;
+}
 
+#item-left,
+#item-active,
+#item-right {
+	@media (max-width: 1190px) {
+		div:first-child {
+			display: none;
+		}
+	}
+	@media (max-width: 767px) {
+		div:last-child {
+			display: none;
+		}
+	}
+}
 
+@keyframes move-right-3card {
+	from {left: 0%;}
+	to {left: -1080px;}
+}
+@keyframes move-right-2card {
+	from {left: 0%;}
+	to {left: -800px;}
+}
+@keyframes move-right-1card {
+	from {left: 0%;}
+	to {left: -490px;}
+}
+
+@keyframes move-left-3card {
+	from {left: 0%;}
+	to {left: 1080px;}
+}
+@keyframes move-left-2card {
+	from {left: 0%;}
+	to {left: 800px;}
+}
+@keyframes move-left-1card {
+	from {left: 0%;}
+	to {left: 490px;}
+}
+
+.transition-right {
+	animation-name: move-right-3card;
+	animation-duration: 1s;
+	@media (max-width: 1190px) {
+		animation-name: move-right-2card;
+		animation-duration: 1s;
+	}
+	@media (max-width: 767px) {
+		animation-name: move-right-1card;
+		animation-duration: 1s;
+	}
+}
+
+.transition-left {
+	animation-name: move-left-3card;
+	animation-duration: 1s;
+	@media (max-width: 1190px) {
+		animation-name: move-left-2card;
+		animation-duration: 1s;
+	}
+	@media (max-width: 767px) {
+		animation-name: move-left-1card;
+		animation-duration: 1s;
+	}
+}

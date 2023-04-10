@@ -17,15 +17,17 @@
 				<div class="logo__subtitle">Shelter for pets in Boston</div>
 			</a>
 			<nav class="navigation">
-				<div class="hamburger">
+				<div class="hamburger__icon">
 					<span class="hamburger__line"></span>
 				</div>
-				<ul class="navigation__list">
-					<li class="navigation__link"><a href="" class="nav__link active">About the shelter</a></li>
-					<li class="navigation__link"><a href="../pets/index.html" class="nav__link">Our pets</a></li>
-					<li class="navigation__link"><a href="#help" class="nav__link">Help the shelter</a></li>
-					<li class="navigation__link"><a href="#contacts" class="nav__link">Contacts</a></li>
-				</ul>
+				<div class="navigation__container">
+					<ul class="navigation__list">
+						<li class="navigation__link"><a href="" class="nav__link active">About the shelter</a></li>
+						<li class="navigation__link"><a href="../pets/index.html" class="nav__link">Our pets</a></li>
+						<li class="navigation__link"><a href="#help" class="nav__link">Help the shelter</a></li>
+						<li class="navigation__link"><a href="#contacts" class="nav__link">Contacts</a></li>
+					</ul>
+				</div>
 			</nav>
 		</div>
 	</header>
@@ -67,74 +69,75 @@
 				</div>
 				<div class="carousel">
 					<div class="carousel__prev">
-						<object type="image/svg+xml" data="../../assets/ico/carousel/arrow_prev.svg" class="carousel__prev-ico">
-							Your browser does not support SVG
-						</object>
+						<img src="../../assets/ico/carousel/arrow_prev.svg" alt="" class="carousel__prev-ico">
 					</div>
-					<div class="carousel__content">
-						<ul class="carousel__list">
-							<li>
+					<div class="carousel__wrapper">
+						<div class="carousel__list">
+							
+							<div class="carousel__item" id="item-left">
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-katrine.png" alt="pet">
+									<img src="../../assets/image/pets/katrine.png" alt="pet">
 									<h3 class="pets-card-title">Katrine</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-							<li>
+
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-jennifer.png" alt="pet">
+									<img src="../../assets/image/pets/jennifer.png" alt="pet">
 									<h3 class="pets-card-title">Jennifer</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-							<li>
+
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-woody.png" alt="pet">
+									<img src="../../assets/image/pets/woody.png" alt="pet">
 									<h3 class="pets-card-title">Woody</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-							<li>
+							</div>
+							
+							<div class="carousel__item" id="item-active">
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-sophia.png" alt="pet">
+									<img src="../../assets/image/pets/sophia.png" alt="pet">
 									<h3 class="pets-card-title">Sophia</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-							<li>
+
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-timmy.png" alt="pet">
+									<img src="../../assets/image/pets/timmy.png" alt="pet">
 									<h3 class="pets-card-title">Timmy</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-							<li>
+
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-charly.png" alt="pet">
+									<img src="../../assets/image/pets/charly.png" alt="pet">
 									<h3 class="pets-card-title">Charly</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-							<li>
+							</div>
+							
+							<div class="carousel__item" id="item-right">
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-scarlett.png" alt="pet">
+									<img src="../../assets/image/pets/scarlett.png" alt="pet">
 									<h3 class="pets-card-title">Scarlett</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-							<li>
+
 								<div class="cards">
-									<img src="../../assets/image/pets/pets-freddie.png" alt="pet">
+									<img src="../../assets/image/pets/freddie.png" alt="pet">
 									<h3 class="pets-card-title">Freddie</h3>
 									<button class="button button__carousel">Learn more</button>
 								</div>
-							</li>
-						</ul>
+
+								<div class="cards">
+									<img src="../../assets/image/pets/katrine.png" alt="pet">
+									<h3 class="pets-card-title">Katrine</h3>
+									<button class="button button__carousel">Learn more</button>
+								</div>
+							</div>
+							
+						</div>
 					</div>
 					<div class="carousel__next">
-						<object type="image/svg+xml" data="../../assets/ico/carousel/arrow_next.svg" class="carousel__prev-ico">
-							Your browser does not support SVG
-						</object>
+						<img src="../../assets/ico/carousel/arrow_next.svg" alt="" class="carousel__prev-ico">
 					</div>
 				</div>
 				<div>
@@ -252,7 +255,7 @@
 				<img src="../../assets/image/main/footer-puppy.png" alt="puppy">
 			</div>
 		</div>
-		<script defer src="./script.js"></script>
 	</footer>
+	<script defer src="script.js"></script>
 </body>
 </html>
