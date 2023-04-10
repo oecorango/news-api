@@ -40,6 +40,9 @@ h3 {
 h4 {
 	@include font ($family: 'Georgia', $size: 1.5rem, $height: 110%, $letter: 0.06em);
 	color: $color-black;
+	@include media-mobile {
+		@include font($family: 'Georgia', $size: 1.3rem, $height: 110%, $letter: 0.06em);
+	}
 }
 
 p {
