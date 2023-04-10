@@ -4,10 +4,14 @@
 	background-color: $color-light-s;
 	width: 270px;
 	height: 435px;
+	margin: 0 45px;
 	border-radius: 9px;
 	user-select: none;
 	cursor: pointer;
 	@extend %transition;
+	@media (max-width: 1190px) {
+		margin: 0 20px;
+	}
 	&:hover {
 		transform: scale(1.02);
 		@extend %transition;
@@ -16,6 +20,9 @@
 		background: $color-primary-light;
 		border: 2px solid $color-primary-light;
 		@extend %transition;
+	}
+	&.pets {
+		margin: 0;
 	}
 }
 
