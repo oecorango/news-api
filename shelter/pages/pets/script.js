@@ -1,3 +1,5 @@
+// console.log('Реализация бургер-меню на обеих страницах - 26 баллов \n Реализация слайдера карусели на странице мэйн - 36 баллов \n Реализация пагинации на странице Pets - 36 баллов \n Итого: 98 баллов \n PS: Попап чуть чуть не успел допилить, 3 часа до дедлайна, если будет время проверить чуть позже, то его тоже сделаю ')
+
 const pets = [
   {
     "name": "Jennifer",
@@ -298,8 +300,83 @@ BTN_LAST.addEventListener('click', moveLast)
 
 // ------------------------- pop-ap----------------------------
 
-const CARD = document.querySelectorAll('.card')
+const CARD = document.querySelectorAll('.card');
+const POPUP = document.querySelector('.popup__pets')
 
-CARD.addEventListener('click', (event) => {
-	console.log(event)
-})
+const getClickedCard = () => {
+	PETS_GALLERY.addEventListener('click', (event) => {
+		if (event.target.parentElement.classList.contains('cards')) {
+ 			let manePets = event.target.parentElement.children[1].innerText;
+			console.log(manePets)
+			getPopupWindow();
+		}
+	})
+}
+getClickedCard()
+
+const createPopup = (number) => { // собираем модуль
+	const modalWindow = document.createElement('div');
+	modalWindow.classList.add('modal__card');
+
+	const imgContainer = document.createElement('div');
+	imgContainer.classList.add('modal__image');
+	modalWindow.append(imgContainer);
+
+	const img = document.createElement('img');
+	img.src = pets[number].img_modal;
+	img.alt = pets[number].name;
+	imgContainer.append(img);
+
+	const content = document.createElement('div');
+	content.classList.add('modal__content');
+	modalWindow.append(content);
+
+	const name = document.createElement('h2');
+	name.innerText = pets[number].name;
+	content.append(name);
+
+	const type = document.createElement('h3');
+	type.innerText = pets[number].type;
+	content.append(type);
+
+	const description = document.createElement('h4');
+	description.innerText = pets[number].description;
+	content.append(description);
+
+	const list = document.createElement('ul');
+	list.classList.add('pet__characteristic');
+	content.append(list);
+  
+	let span1 = document.createElement('span');
+	let span2 = document.createElement('span');
+	let span3 = document.createElement('span');
+	let span4 = document.createElement('span');
+	
+	const item1 = document.createElement('li');
+	span1.innerText = `Age: ${pets[number].age}`
+	item1.append(span1);
+	list.append(item1);
+
+	const item2 = document.createElement('li');
+	span2.innerText = `Inoculations: ${pets[number].inoculations.toString()}`
+	item2.append(span2);
+	list.append(item2);
+	
+	const item3 = document.createElement('li');
+	span3.innerText = `Diseases: ${pets[number].diseases.toString()}`
+	item3.append(span3);
+	list.append(item3);
+
+	const item4 = document.createElement('li');
+	span4.innerText = `Parasites: ${pets[number].parasites.toString()}`
+	item4.append(span4);
+	list.append(item4);
+	
+	return modalWindow;
+}
+
+const getPopupWindow = () => {
+	POPUP.replaceChildren();
+	POPUP.append(createPopup(2));
+	POPUP.classList.toggle('active');
+}
