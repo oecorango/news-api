@@ -1,10 +1,9 @@
 # Self-introduction.
 
-**YouTube:** http://youtube.com (So far, I'll add a link soon)
+**YouTube:** <code>http://youtube.com</code> (So far, I'll add a link soon) 
 
 Hi! I'm Oleg.
 Sorry, now I'm bringing Minesweeper to mind, I'll record a video soon.
-So that you are not bored, here is a link to Minesweeper:
+So that you are not bored, here is a link to Minesweeper: <code>
 https://rolling-scopes-school.github.io/oecorango-JSFE2023Q1/minesweeper/
-
-
+</code>
