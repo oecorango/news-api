@@ -1,8 +1,8 @@
 {
-    "plugins": ["prettier", "import"],
+    "plugins": ["import", "prettier"],
     "extends": [
-        "plugin:prettier/recommended",
-        "prettier"
+        "prettier",
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2020,
