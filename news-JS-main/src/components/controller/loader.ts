@@ -1,20 +1,4 @@
-interface Resp {
-  endpoint: string;
-  options: object;
-}
-
-// interface Tcallback {
-//   tempObj: object;
-//   newsInfo: string;
-// }
-
-// type Options =
-//   | Partial<{
-//       sources?: string;
-//       category?: string;
-//       language?: string;
-//     }>
-//   | undefined;
+import { IResp } from '../../types';
 
 class Loader {
   private baseLink: string;
@@ -27,7 +11,7 @@ class Loader {
   }
 
   public getResp(
-    { endpoint, options }: Resp,
+    { endpoint, options }: IResp,
     callback = (): void => {
       console.error('No callback for GET response');
     },
@@ -46,7 +30,6 @@ class Loader {
 
   private makeUrl(options: object, endpoint: string): string {
     const urlOptions = { ...this.options, ...options };
-
     let url = `${this.baseLink}${endpoint}?`;
 
     Object.keys(urlOptions).forEach((key) => {
@@ -56,7 +39,12 @@ class Loader {
     return url.slice(0, -1);
   }
 
-  private load(method: string, endpoint: string, callback: { (): void; (arg0: void): void }, options: object): void {
+  private load(
+    method: string,
+    endpoint: string,
+    callback: { (arg0: void): void; (arg1: void): void },
+    options = {},
+  ): void {
     fetch(this.makeUrl(options, endpoint), { method })
       .then(Loader.errorHandler)
       .then((res) => res.json())
