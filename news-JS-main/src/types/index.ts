@@ -14,7 +14,12 @@ export type Article = {
   urlToImage: string;
 };
 
-type Source = {
+export type Source = {
   id: string;
   name: string;
+  url?: string;
+  language?: string;
+  description?: string;
+  country?: string;
+  category?: string;
 };

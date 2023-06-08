@@ -21,7 +21,7 @@ class News {
         newsTempClone1.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
       }
 
-      const newsTempClone2 = newsClone.querySelector('.news__meta-photo');
+      const newsTempClone2 = newsClone.querySelector('.news__meta-author');
       if (newsTempClone2) {
         newsTempClone2.textContent = item.author || item.source.name;
       }
@@ -54,10 +54,10 @@ class News {
       fragment.append(newsClone);
     });
 
-    const newsTempClone = document.querySelector('.news');
-    if (newsTempClone) {
-      newsTempClone.innerHTML = '';
-      newsTempClone.appendChild(fragment);
+    const newsDoc = document.querySelector('.news');
+    if (newsDoc) {
+      newsDoc.innerHTML = '';
+      newsDoc.appendChild(fragment);
     }
   }
 }
