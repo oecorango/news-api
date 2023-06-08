@@ -41,12 +41,12 @@ class News {
         newsTempClone5.textContent = item.source.name;
       }
 
-      const newsTempClone6: HTMLElement | null = newsClone.querySelector('.news__description-source');
+      const newsTempClone6: HTMLElement | null = newsClone.querySelector('.news__description-content');
       if (newsTempClone6) {
         newsTempClone6.textContent = item.description;
       }
 
-      const newsTempClone7: HTMLElement | null = newsClone.querySelector('.news__description-source');
+      const newsTempClone7: HTMLElement | null = newsClone.querySelector('.news__read-more a');
       if (newsTempClone7) {
         newsTempClone7.setAttribute('href', item.url);
       }
