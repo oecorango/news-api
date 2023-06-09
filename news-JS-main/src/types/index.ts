@@ -30,7 +30,9 @@ export type DataNews = {
   totalResult: number;
 };
 
-export type DataSourse = {
+export type DataSources = {
   sources: [Source];
   status: string;
 };
+
+export type Callback<T> = (data: T) => void;
