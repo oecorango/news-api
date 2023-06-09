@@ -23,3 +23,14 @@ export type Source = {
   country?: string;
   category?: string;
 };
+
+export type DataNews = {
+  articles: [Article];
+  status: string;
+  totalResult: number;
+};
+
+export type DataSourse = {
+  sources: [Source];
+  status: string;
+};
