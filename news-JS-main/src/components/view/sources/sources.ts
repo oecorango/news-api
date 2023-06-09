@@ -2,8 +2,7 @@ import './sources.css';
 import { Source } from '../../../types';
 
 class Sources {
-  // eslint-disable-next-line class-methods-use-this
-  public draw(data: Source[]): void {
+  public static draw(data: Source[]): void {
     const fragment = document.createDocumentFragment();
     const sourceItemTemp = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
 

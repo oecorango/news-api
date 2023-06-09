@@ -5,7 +5,7 @@ import { DataNews, DataSources } from '../../types';
 class App {
   private controller: AppController;
 
-  private view: AppView;
+  public view: AppView;
 
   constructor() {
     this.controller = new AppController();
@@ -16,9 +16,9 @@ class App {
     const doc: HTMLElement | null = document.querySelector('.sources');
     if (doc) {
       doc.addEventListener('click', (e: MouseEvent): void =>
-        this.controller.getNews(e, (data: DataNews) => this.view.drawNews(data)),
+        this.controller.getNews(e, (data: DataNews) => AppView.drawNews(data)),
       );
-      this.controller.getSources((data: DataSources) => this.view.drawSources(data));
+      this.controller.getSources((data: DataSources) => AppView.drawSources(data));
     }
   }
 }
