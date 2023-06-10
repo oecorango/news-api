@@ -1,6 +1,6 @@
 import './footer.css';
-import schoolLogo from '../../assets/rs_school.svg';
-import githubLogo from '../../assets/github.svg';
+import schoolLogo from '../../../assets/ico/rs_school.svg';
+import githubLogo from '../../../assets/ico/github.svg';
 
 const containerScholl = document.querySelector('.rs-school');
 if (containerScholl) {

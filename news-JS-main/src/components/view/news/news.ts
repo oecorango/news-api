@@ -1,5 +1,6 @@
 import './news.css';
 import { Article } from '../../../types';
+import img from '../../../assets/img/news-placeholder.jpg';
 
 class News {
   public static draw(data: Article[]): void {
@@ -17,7 +18,7 @@ class News {
 
       const newsTempClone1: HTMLElement | null = newsClone.querySelector('.news__meta-photo');
       if (newsTempClone1) {
-        newsTempClone1.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+        newsTempClone1.style.backgroundImage = `url(${item.urlToImage || img})`;
       }
 
       const newsTempClone2 = newsClone.querySelector('.news__meta-author');
