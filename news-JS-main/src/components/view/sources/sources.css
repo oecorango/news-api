@@ -43,8 +43,8 @@
 
 @media (min-width: 1000px) {
   .sources {
-      max-width: 1200px;
-      font: 300 1em 'Fira Sans', sans-serif;
+    max-width: 1200px;
+    font: 300 1em 'Fira Sans', sans-serif;
 }
   .source__item {
     width: 150px;
