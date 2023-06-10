@@ -36,3 +36,11 @@ export type DataSources = {
 };
 
 export type Callback<T> = (data: T) => void;
+
+export function setElement(elem: HTMLElement | Document, str: string): HTMLElement {
+  const element = elem.querySelector(str) as HTMLElement;
+  if (!element) {
+    throw new Error('Ooops!');
+  }
+  return element;
+}

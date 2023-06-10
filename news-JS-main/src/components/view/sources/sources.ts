@@ -1,5 +1,5 @@
 import './sources.css';
-import { Source } from '../../../types';
+import { Source, setElement } from '../../../types';
 
 class Sources {
   public static draw(data: Source[]): void {
@@ -9,23 +9,13 @@ class Sources {
     data.forEach((item) => {
       const sourceClone = sourceItemTemp.content.cloneNode(true) as HTMLElement;
 
-      const newsSourseClone: HTMLElement | null = sourceClone.querySelector('.source__item-name');
-      if (newsSourseClone) {
-        newsSourseClone.textContent = item.name;
-      }
-
-      const newsSourseClone1: HTMLElement | null = sourceClone.querySelector('.source__item');
-      if (newsSourseClone1) {
-        newsSourseClone1.setAttribute('data-source-id', item.id);
-      }
+      setElement(sourceClone, '.source__item-name').textContent = item.name;
+      setElement(sourceClone, '.source__item').setAttribute('data-source-id', item.id);
 
       fragment.append(sourceClone);
     });
 
-    const sourceDoc = document.querySelector('.sources');
-    if (sourceDoc) {
-      sourceDoc.append(fragment);
-    }
+    setElement(document, '.sources').append(fragment);
   }
 }
 
