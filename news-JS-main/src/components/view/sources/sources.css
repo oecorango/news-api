@@ -28,6 +28,10 @@
   cursor: pointer;
 }
 
+.source__item_off {
+  display: none;
+}
+
 .source__item:hover,
 .source__item:focus {
   border-color: #3fcc59;
