@@ -1,0 +1,17 @@
+.find {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  width: 300px;
+  margin: 30px auto;
+}
+
+.find__input {
+  border-radius: 5px;
+  font: 300 1em 'Fira Sans', sans-serif;
+}
+
+.find > button {
+  border-radius: 5px;
+  width: 70px;
+}
