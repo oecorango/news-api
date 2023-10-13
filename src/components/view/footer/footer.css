@@ -1,0 +1,11 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 320px;
+}
+
+.about > p {
+  color: #333;
+}
